@@ -12,6 +12,7 @@ var q3 = document.getElementById('q3');
 var timer = document.getElementById('timer');
 var rollButton = document.getElementById('roll');
 var counter;
+var initialTime;
 
 var rand = function rand() {
   questionNumber++;
@@ -45,7 +46,7 @@ function stopTimer() {
 
 function restartTimer() {
   stopTimer();
-  var initialTime = 2;
+  initialTime = 180;
   counter = setInterval(function () {
     if (initialTime <= 0) {
       clearInterval(counter);
