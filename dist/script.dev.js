@@ -45,16 +45,16 @@ function stopTimer() {
 
 function restartTimer() {
   stopTimer();
-  var initialTime = 180;
+  var initialTime = 2;
   counter = setInterval(function () {
-    if (initialTime < 0) {
+    if (initialTime <= 0) {
       clearInterval(counter);
+    } else {
+      initialTime--;
+      var minutes = ("0" + Math.floor(initialTime / 60)).substr(-2);
+      var seconds = ("0" + initialTime % 60).substr(-2);
+      timer.innerText = "".concat(minutes, ":").concat(seconds);
     }
-
-    initialTime--;
-    var minutes = ("0" + Math.floor(initialTime / 60)).substr(-2);
-    var seconds = ("0" + initialTime % 60).substr(-2);
-    timer.innerText = "".concat(minutes, ":").concat(seconds);
   }, 1000);
 }
 

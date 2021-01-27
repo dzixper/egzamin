@@ -38,15 +38,16 @@ function stopTimer() {
 
 function restartTimer() {
   stopTimer();
-  let initialTime = 180;
+  let initialTime = 2;
   counter = setInterval(() => {
-    if(initialTime < 0) {
+    if(initialTime <= 0) {
       clearInterval(counter);
+    } else {
+      initialTime--;
+      let minutes = ("0"+Math.floor(initialTime/60)).substr(-2);
+      let seconds = ("0"+(initialTime%60)).substr(-2);
+      timer.innerText = `${minutes}:${seconds}`;
     }
-    initialTime--;
-    let minutes = ("0"+Math.floor(initialTime/60)).substr(-2);
-    let seconds = ("0"+(initialTime%60)).substr(-2);
-    timer.innerText = `${minutes}:${seconds}`;
   }, 1000);
 }
 
