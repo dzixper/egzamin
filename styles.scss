@@ -8,6 +8,7 @@ html, body {
   color: rgb(55, 55, 55);
   font-weight: 300;
   animation: fadeIn 1s ease-out;
+  user-select: none;
 }
 
 @keyframes fadeIn {
@@ -68,6 +69,7 @@ html, body {
   &:hover {
     background: #b5838d;
     color: white;
+    cursor: pointer;
   }
 }
 

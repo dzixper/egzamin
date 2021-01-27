@@ -8,6 +8,7 @@ html, body {
   color: #373737;
   font-weight: 300;
   animation: fadeIn 1s ease-out;
+  user-select: none;
 }
 
 @keyframes fadeIn {
@@ -66,6 +67,7 @@ html, body {
 .roll-button:hover {
   background: #b5838d;
   color: white;
+  cursor: pointer;
 }
 
 .timer {
