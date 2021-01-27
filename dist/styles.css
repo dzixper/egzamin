@@ -7,8 +7,17 @@ html, body {
   font-family: Roboto, sans-serif;
   color: #373737;
   font-weight: 300;
+  animation: fadeIn 1s ease-out;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .flex, #timer, .questions, .card, .wrapper {
   display: flex;
 }
