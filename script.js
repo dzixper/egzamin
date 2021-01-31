@@ -1,11 +1,9 @@
-import {firstQ, secondQ, thirdQ} from './questions.js';
+import {firstQ, secondQ} from './questions.js';
 let questionNumber = 0;
 let firstQuestionArray = firstQ;
 let secondQuestionArray = secondQ;
-let thirdQuestionArray = thirdQ;
 let q1 = document.getElementById('q1');
 let q2 = document.getElementById('q2');
-let q3 = document.getElementById('q3');
 let timer = document.getElementById('timer');
 let rollButton = document.getElementById('roll');
 let counter;
@@ -20,9 +18,6 @@ const rand = () => {
       break;
     case 2:
       q2.innerText = getRandomElement(secondQuestionArray);
-      break;
-    case 3:
-      q3.innerText = getRandomElement(thirdQuestionArray);
       break;
     default:
       questionNumber = 0;
@@ -58,7 +53,7 @@ function getRandomElement(array) {
 }
 
 function clearQuestions() {
-  q1.innerText = q2.innerText = q3.innerText = "";
+  q1.innerText = q2.innerText = "";
 }
 
 rollButton.addEventListener('click', rand);
